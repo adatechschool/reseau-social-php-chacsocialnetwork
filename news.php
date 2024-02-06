@@ -7,8 +7,12 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+    <div class="headerPS">
+        <img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto>
+        <h1>Send</h1>
+    </div>
         <header>
-            <a href='admin.php'><img src="resoc.jpg" alt="Logo de notre réseau social"/></a>
+            <a href='admin.php'><img src="resoc.png" alt="Logo de Send"/></a>
             <nav id="menu">
                 <a href="news.php">Actualités</a>
                 <a href="wall.php?user_id=5">Mur</a>
@@ -26,7 +30,7 @@
         </header>
         <div id="wrapper">
             <aside>
-                <img src="user.jpg" alt="Portrait de l'utilisatrice"/>
+                <img src="user.png" alt="Portrait de l'utilisatrice"/>
                 <section>
                     <h3>Présentation</h3>
                     <p>Sur cette page vous trouverez les derniers messages de
