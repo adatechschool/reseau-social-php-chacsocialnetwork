@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>Send - Actus</title> 
-        <meta name="author" content="Julien Falconnet">
+        <meta name="author" content="Chac">
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
 
     <div class="headerPS">
-        <img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto>
+        <img src="resoc.png" alt="Logo de Send" width="30" height=auto>
         <h1>Send</h1>
     </div>
             <nav aria-label="Navigation">
