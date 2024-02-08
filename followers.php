@@ -9,7 +9,7 @@
     <body>
 
     <div class="headerPS">
-        <img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto>
+        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
             <nav aria-label="Navigation">

@@ -1,15 +1,17 @@
+<?php include "connection.php"; ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
         <title>Send - Actus</title> 
-        <meta name="author" content="Julien Falconnet">
+        <meta name="author" content="CHAC">
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
 
     <div class="headerPS">
-        <img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto>
+        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
             <nav aria-label="Navigation">
@@ -32,8 +34,6 @@
         /**
          * Etape 1: Ouvrir une connexion avec la base de donnée.
          */
-        // on va en avoir besoin pour la suite
-        $mysqli = new mysqli("localhost", "root", "root", "socialnetwork");
         //verification
         if ($mysqli->connect_errno)
         {
@@ -63,13 +63,13 @@
                  */
                 while ($tag = $lesInformations->fetch_assoc())
                 {
-                    echo "<pre>" . print_r($tag, 1) . "</pre>";
+                    // echo "<pre>" . print_r($tag, 1) . "</pre>";
                     ?>
                     <article>
-                        <h3>#chaussette</h3>
-                        <p>id:321</p>
+                        <h3>#<?php echo $tag['label']; ?></h3>
+                        <p><?php echo $tag['id']; ?></p>
                         <nav>
-                            <a href="tags.php?tag_id=321">Messages</a>
+                            <a href="tags.php?tag_id=<?php echo $tag['id']?>">Messages</a>
                         </nav>
                     </article>
                 <?php } ?>
