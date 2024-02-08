@@ -1,3 +1,5 @@
+<?php include 'connection.php' ?>
+
 <!doctype html>
 <html lang="fr">
     <head>
@@ -12,6 +14,7 @@
         <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
+
             <nav aria-label="Navigation">
                 <ul>
                     <li><a href="news.php">Actualités</a></li>
@@ -51,11 +54,6 @@
                 $userId = intval($_GET['user_id']);
 
                 /**
-                 * Etape 2: se connecter à la base de donnée
-                 */
-                $mysqli = new mysqli("localhost", "root", "root", "socialnetwork");
-
-                /**
                  * Etape 3: récupérer le nom de l'utilisateur
                  */
                 $laQuestionEnSql = "
@@ -87,17 +85,16 @@
                     <h3>Mes paramètres</h3>
                     <dl>
                         <dt>Pseudo</dt>
-                        <dd>Félicie</dd>
+                        <dd><?php echo $user['alias']; ?></dd>
                         <dt>Email</dt>
-                        <dd>felicie@test.org</dd>
+                        <dd><?php echo $user['email']; ?></dd>
                         <dt>Nombre de message</dt>
-                        <dd>42</dd>
+                        <dd><?php echo $user['totalpost']; ?></dd>
                         <dt>Nombre de "J'aime" donnés </dt>
-                        <dd>12</dd>
+                        <dd><?php echo $user['totalgiven']; ?></dd>
                         <dt>Nombre de "J'aime" reçus</dt>
-                        <dd>53</dd>
+                        <dd><?php echo $user['totalrecieved']; ?></dd>
                     </dl>
-
                 </article>
             </main>
         </div>
