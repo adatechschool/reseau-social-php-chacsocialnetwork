@@ -87,8 +87,6 @@
                  */
                 while ($post = $lesInformations->fetch_assoc())
                 {
-
-                    echo "<pre>" . print_r($post, 1) . "</pre>";
                     ?>                
                     <article>
                         <h3>
@@ -100,7 +98,7 @@
                         </div>                                            
                         <footer>
                             <small>❤️ <?php echo $post['like_number']; ?></small>
-                            <a href=""><?php echo $post['taglist']; ?></a>,
+                            <a href="">#<?php echo $post['taglist']; ?></a>,
                         </footer>
                     </article>
                 <?php } ?>
