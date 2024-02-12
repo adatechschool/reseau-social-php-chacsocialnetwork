@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>Send - Tags</title>
-    <link rel="shortcut icon" href="/resoc.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/resoc.ico" type="image/x-icon">
     <meta name="author" content="Chac">
     <link rel="stylesheet" href="style.css" />
 </head>
