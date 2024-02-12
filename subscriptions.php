@@ -38,7 +38,7 @@
             <section>
                 <h3>Présentation</h3>
                 <p>Sur cette page vous trouverez la liste des personnes dont
-                    l'utilisatrice <?php echo $user['alias']; ?> (<?php echo intval($_GET['user_id']) ?>) suit les messages
+                    l'utilisatrice <?php echo $user['alias']; ?><?php echo intval($_GET['user_id']) ?>suit les messages
                 </p>
 
             </section>
@@ -64,7 +64,7 @@
             ?>
                 <article>
                     <img src="user.png" alt="blason" />
-                    <h3><?php echo $follower['alias']; ?></h3>
+                    <h3><a href="wall.php?user_id=<?php echo $follower['id'] ?>"><?php echo $follower['alias']; ?></a></h3>
                     <p>(n° <?php echo $follower["id"] ?>)</p>
                 </article>
             <?php } ?>

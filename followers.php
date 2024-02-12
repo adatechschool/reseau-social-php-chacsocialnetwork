@@ -60,11 +60,11 @@
             // Etape 4: à vous de jouer
             //@todo: faire la boucle while de parcours des abonnés et mettre les bonnes valeurs ci dessous 
             while ($follower = $lesInformations->fetch_assoc()) {
-                // echo "<pre>" . print_r($follower, 1) . "</pre>";
+                //echo "<pre>" . print_r($follower, 1) . "</pre>";
             ?>
                 <article>
                     <img src="user.png" alt="blason" />
-                    <h3><a href=""><?php echo $follower['alias']; ?></a></h3>
+                    <h3><a href="wall.php?user_id=<?php echo $follower['id'] ?>"><?php echo $follower['alias']; ?></a></h3>
                 </article>
             <?php } ?>
         </main>
