@@ -325,6 +325,7 @@ button {
   background: none;
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -351,6 +352,7 @@ a {
   align-items: center;
   position: relative;
 }
+
 .close-button {
   position: absolute;
   top: 0;
@@ -359,9 +361,11 @@ a {
   padding: 7px 11px;
   border-radius: 50%;
 }
+
 .close-button:hover {
   background-color: #212222;
 }
+
 .logo {
   font-size: 30px;
 }
@@ -371,6 +375,7 @@ a {
   text-align: center;
   margin-inline: auto;
 }
+
 .content h1 {
   margin-block: 28px;
 }
@@ -381,6 +386,7 @@ a {
   gap: 24px;
   margin-top: 36px;
 }
+
 .primary-button,
 .secondary-button {
   width: 100%;
@@ -389,27 +395,33 @@ a {
   font-size: 15px;
   font-weight: 500;
 }
+
 .primary-button {
   background-color: #fff;
   color: #0f1419;
 }
+
 .primary-button:hover {
   background-color: #e6e6e6;
 }
+
 .secondary-button {
   background-color: transparent;
   color: #fff;
   border: 1px solid #536471;
 }
+
 .secondary-button:hover {
   background-color: #181919;
 }
+
 .sign-in-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
 }
+
 .sign-in-button object {
   width: 24px;
   height: 24px;
@@ -420,6 +432,7 @@ a {
   margin-block: 20px;
   position: relative;
 }
+
 .divider p::before,
 .divider p::after {
   content: "";
@@ -430,9 +443,11 @@ a {
   height: 1px;
   background-color: #333639;
 }
+
 .divider p::before {
   left: 0;
 }
+
 .divider p::after {
   right: 0;
 }
@@ -441,6 +456,7 @@ a {
   width: 100%;
   position: relative;
 }
+
 .email-log-in input {
   width: 100%;
   border-radius: 6px;
@@ -452,10 +468,12 @@ a {
   font-size: 18px;
   font-family: "Roboto";
 }
+
 input::placeholder {
   opacity: 0;
 }
-input + label {
+
+input+label {
   position: absolute;
   top: 20px;
   left: 10px;
@@ -464,14 +482,17 @@ input + label {
   pointer-events: none;
   transition: 200ms ease;
 }
+
 input:focus {
   outline: 1px solid #1d9bf0;
 }
-input:focus + label {
+
+input:focus+label {
   color: #1d9bf0;
 }
-input:not(:placeholder-shown) + label,
-input:focus + label {
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
   top: 6px;
   left: 10px;
   font-size: 12px;
@@ -482,12 +503,31 @@ input:focus + label {
   font-weight: 300;
   text-align: center;
 }
+
 .sign-up a {
   color: #1d9bf0;
 }
+
 .sign-up a:hover {
   text-decoration: underline;
   text-decoration-color: #1d9bf0;
+}
+
+form dl dt {
+  float: left;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+form dl dd {
+  margin-left: 10em;
+  line-height: 1.5em;
+  margin-bottom: 1em
+}
+
+form dl dd textarea {
+  width: 40em;
+  height: 15em;
 }
 
 /* #endregion Log In */

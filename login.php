@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="headerPS">
+<div class="headerPS">
         <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
-    <nav aria-label="Navigation">
+        <nav aria-label="Navigation">
         <ul>
             <li><a href="news.php">Actualités</a></li>
             <li><a href="wall.php?user_id=5">Mur</a></li>
@@ -34,15 +34,8 @@
     </nav>
 
     <div id="wrapper">
-
-        <aside>
-            <h2>Présentation</h2>
-            <p>Bienvenu sur notre réseau social.</p>
-        </aside>
         <main>
             <article>
-            <h2>Présentation</h2>
-            <p>Bienvenue sur notre réseau social.</p>
                 <h2>Connexion</h2>
                 <?php
                 /**
@@ -90,48 +83,12 @@
                 ?>
                 <form action="login.php" method="post">
                     <input type='hidden' name='???' value='achanger'>
-                    <div class="container">
-                        <div class="header">
-                            <button class="close-button">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                            <a class="logo" href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </div>
-
-                        <div class="content">
-                            <h1>Log in to Twitter</h1>
-
-                            <div class="action-buttons">
-                                <button class="primary-button sign-in-button">
-                                    <object data="./google.svg"></object>
-                                    <span>Sign in with Google</span>
-                                </button>
-                                <button class="primary-button sign-in-button">
-                                    <object data="./apple.svg"></object>
-                                    <span>Sign in with Apple</span>
-                                </button>
-                            </div>
-
-                            <div class="divider">
-                                <p>or</p>
-                            </div>
-
-                            <div class="email-log-in">
-                                <input type="text" id="log-in" placeholder="Email">
-                                <label for="log-in">Phone, email or username</label>
-                            </div>
-
-                            <div class="action-buttons">
-                                <button class="primary-button">Next</button>
-                                <button class="secondary-button">Forgot Password?</button>
-                            </div>
-                        </div>
-                        <div class="sign-up">
-                            <p>Don't have an account? <a href="#">Sign up</a></p>
-                        </div>
-                    </div>
+                    <dl>
+                        <dt><label for='email'>E-Mail</label></dt>
+                        <dd><input type='email' name='email'></dd>
+                        <dt><label for='motpasse'>Mot de passe</label></dt>
+                        <dd><input type='password' name='motpasse'></dd>
+                    </dl>
                     <input type='submit'>
                 </form>
                 <p>
