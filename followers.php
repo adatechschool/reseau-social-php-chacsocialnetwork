@@ -6,7 +6,8 @@
 <head>
     <meta charset="utf-8">
     <title>Send - Followers</title>
-    <meta name="author" content="Julien Falconnet">
+    <link rel="shortcut icon" href="sendico.ico" type="image/x-icon">
+    <meta name="author" content="Chac">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,7 +26,7 @@
             <li><a href="#">▾ Profil</a>
                 <ul>
                     <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
+                    <li><a href="followers.php?user_id=5">Mes followers</a></li>
                     <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
                 </ul>
             </li>
@@ -33,7 +34,7 @@
     </nav>
     <div id="wrapper">
         <aside>
-            <img src="user.jpg" alt="Portrait de l'utilisatrice" />
+            <img src="user.png" alt="Portrait de l'utilisatrice" />
             <section>
                 <h3>Présentation</h3>
                 <p>Sur cette page vous trouverez la liste des personnes qui
@@ -58,12 +59,15 @@
             $lesInformations = $mysqli->query($laQuestionEnSql);
             // Etape 4: à vous de jouer
             //@todo: faire la boucle while de parcours des abonnés et mettre les bonnes valeurs ci dessous 
+            while ($follower = $lesInformations->fetch_assoc()) {
+                // echo "<pre>" . print_r($follower, 1) . "</pre>";
             ?>
-            <article>
-                <img src="user.jpg" alt="blason" />
-                <h3>Béatrice</h3>
-                <p>id:321</p>
-            </article>
+                <article>
+                    <img src="user.png" alt="blason" />
+                    <h3><?php echo $follower['alias']; ?></h3>
+                      
+                </article>
+            <?php } ?>
         </main>
     </div>
 </body>

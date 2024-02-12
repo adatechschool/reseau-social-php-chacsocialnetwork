@@ -6,7 +6,8 @@
 <head>
     <meta charset="utf-8">
     <title>Send - Admin</title>
-    <meta name="author" content="CHAC">
+    <link rel="shortcut icon" href="sendico.ico" type="image/x-icon">
+    <meta name="author" content="Chac">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,7 +26,7 @@
             <li><a href="#">▾ Profil</a>
                 <ul>
                     <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
+                    <li><a href="followers.php?user_id=5">Mes followers</a></li>
                     <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
                 </ul>
             </li>

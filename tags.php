@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>Send - Tags</title>
-    <link rel="shortcut icon" href="/resoc.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="sendico.ico" type="image/x-icon">
     <meta name="author" content="Chac">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -26,7 +26,7 @@
             <li><a href="#">▾ Profil</a>
                 <ul>
                     <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
+                    <li><a href="followers.php?user_id=5">Mes followers</a></li>
                     <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
                 </ul>
             </li>
@@ -54,14 +54,12 @@
             $lesInformations = $mysqli->query($laQuestionEnSql);
             $tag = $lesInformations->fetch_assoc();
             //@todo: afficher le résultat de la ligne ci dessous, remplacer XXX par le label et effacer la ligne ci-dessous
-            echo "<pre>" . print_r($tag, 1) . "</pre>";
             ?>
             <img src="user.png" alt="Portrait de l'utilisatrice" />
             <section>
                 <h3>Présentation</h3>
                 <p>Sur cette page vous trouverez les derniers messages comportant
-                    le mot-clé XXX
-                    (n° <?php echo $tagId ?>)
+                    le mot-clé <?php echo $tag['label']; ?> (n° <?php echo $tagId ?>)
                 </p>
 
             </section>
@@ -97,24 +95,19 @@
              */
             while ($post = $lesInformations->fetch_assoc()) {
 
-                echo "<pre>" . print_r($post, 1) . "</pre>";
+                // echo "<pre>" . print_r($post, 1) . "</pre>";
             ?>
                 <article>
                     <h3>
-                        <time datetime='2020-02-01 11:12:13'>31 février 2010 à 11h12</time>
+                        <time datetime='2020-02-01 11:12:13'><?php echo $post['created']; ?></time>
                     </h3>
-                    <address>par AreTirer</address>
+                    <address>Par <?php echo $post['author_name']; ?></address>
                     <div>
-                        <p>Ceci est un paragraphe</p>
-                        <p>Ceci est un autre paragraphe</p>
-                        <p>... de toutes manières il faut supprimer cet
-                            article et le remplacer par des informations en
-                            provenance de la base de donnée</p>
+                        <p><?php echo $post['content']; ?></p>
                     </div>
                     <footer>
-                        <small>♥ 132</small>
-                        <a href="">#lorem</a>,
-                        <a href="">#piscitur</a>,
+                        <small>❤️ <?php echo $post['like_number']; ?></small>
+                        <a href="">#<?php echo $post['taglist']; ?></a>,
                     </footer>
                 </article>
             <?php } ?>

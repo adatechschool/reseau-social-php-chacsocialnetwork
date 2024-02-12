@@ -6,7 +6,8 @@
 <head>
     <meta charset="utf-8">
     <title>Send - Paaramètres</title>
-    <meta name="author" content="Julien Falconnet">
+    <link rel="shortcut icon" href="sendico.ico" type="image/x-icon">
+    <meta name="author" content="Chac">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -26,7 +27,7 @@
             <li><a href="#">▾ Profil</a>
                 <ul>
                     <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
+                    <li><a href="followers.php?user_id=5">Mes followers</a></li>
                     <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
                 </ul>
             </li>
@@ -36,7 +37,7 @@
 
 
         <aside>
-            <img src="user.jpg" alt="Portrait de l'utilisatrice" />
+            <img src="user.png" alt="Portrait de l'utilisatrice" />
             <section>
                 <h3>Présentation</h3>
                 <p>Sur cette page vous trouverez les informations de l'utilisatrice
