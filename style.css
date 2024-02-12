@@ -1,317 +1,317 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #333447;
-    margin: 0;
-    padding: 0;
-    font-family: 'Playfair Display', serif;
+  background: #333447;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
 }
 
 /* #region Medias Query */
 
 /* Styles pour les petits écrans (généralement les téléphones mobiles en mode portrait) */
 @media screen and (max-width: 600px) {
-    nav a {
-      font-size: .625rem;
-    }
+  nav a {
+    font-size: .625rem;
   }
-  
-  /* Styles pour les écrans de taille moyenne */
-  @media screen and (min-width: 600px) {
-    nav a {
-      font-size: .876rem;
-    }
+}
+
+/* Styles pour les écrans de taille moyenne */
+@media screen and (min-width: 600px) {
+  nav a {
+    font-size: .876rem;
   }
-  
-  /* Styles pour les grands écrans */
-  @media screen and (min-width: 900px) {
-    nav a {
-      font-size: 1rem;
-    }
+}
+
+/* Styles pour les grands écrans */
+@media screen and (min-width: 900px) {
+  nav a {
+    font-size: 1rem;
   }
+}
 
 /* #endregion Medias Query */
 
 /* #region Logo + Send */
 
 .headerPS {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    background: black;
-    color: #FFF;
-    text-align: center;
-    font-family: Public Sans;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: black;
+  color: #FFF;
+  text-align: center;
+  font-family: Public Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 /* #endregion Logo + Send */
 
 /* #region Header NavBar Section */
 
 nav {
-    padding: .625rem;
-    background-color: #f8f9fa;
-    margin-bottom: 1rem;
-  }
-  
-  nav>ul {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    list-style-type: none;
-    position: relative;
-  }
-  
-  nav a {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    padding: .875rem 1rem;
-    font-family: sans-serif;
-    font-size: 1.23rem;
-    transition: .5s;
-    background: transparent;
-  }
-  
-  nav a:hover {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  nav a::before {
-    content: "";
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    height: 12px;
-    width: 12px;
-    border: 3px solid dodgerblue;
-    border-width: 0 0 3px 3px;
-    opacity: 0;
-    transition: all 0.3s;
-  }
-  
-  a::after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    height: 12px;
-    width: 12px;
-    border: 3px solid dodgerblue;
-    border-width: 3px 3px 0 0;
-    opacity: 0;
-    transition: all 0.3s;
-  }
-  
-  a:hover::before {
-    opacity: 1;
-    bottom: -8px;
-    left: -8px;
-  }
-  
-  a:hover::after {
-    opacity: 1;
-    top: -8px;
-    right: -8px;
-  }
-  
-  /* Sous-menus */
-  
-  nav li ul {
-    display: none;
-    position: absolute;
-    /* on le sort du flow */
-    left: -50%;
-    top: 100%;
-    /* on le positionne à 100% de la hauteur de son conteneur, donc en dessous */
-    background-color: #f9f9f9;
-    min-width: 10rem;
-    max-width: 80vw;
-    box-shadow: 0 .5rem 1rem 0 rgba(0 0 0 / 20%);
-    padding: .25rem;
-  }
-  
-  nav ul li a {
-    color: gray;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    position: relative
-  }
-  
-  nav li:is(:hover, :active) ul {
-    display: block;
-  }
-  
-  nav li ul a {
-    width: 100%;
-  }
-  
-  /* un peu experimental mais permet de garder l'effet actif du lien parent quand on est dans le dropdown */
-  nav li:has(ul:is(:hover, :active, :focus-within))>a {
-    background-color: #ddd;
-  }
+  padding: .625rem;
+  background-color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+  position: relative;
+}
+
+nav a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  padding: .875rem 1rem;
+  font-family: sans-serif;
+  font-size: 1.23rem;
+  transition: .5s;
+  background: transparent;
+}
+
+nav a:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  height: 12px;
+  width: 12px;
+  border: 3px solid dodgerblue;
+  border-width: 0 0 3px 3px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 12px;
+  width: 12px;
+  border: 3px solid dodgerblue;
+  border-width: 3px 3px 0 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+a:hover::before {
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+}
+
+a:hover::after {
+  opacity: 1;
+  top: -8px;
+  right: -8px;
+}
+
+/* Sous-menus */
+
+nav li ul {
+  display: none;
+  position: absolute;
+  /* on le sort du flow */
+  left: -50%;
+  top: 100%;
+  /* on le positionne à 100% de la hauteur de son conteneur, donc en dessous */
+  background-color: #f9f9f9;
+  min-width: 10rem;
+  max-width: 80vw;
+  box-shadow: 0 .5rem 1rem 0 rgba(0 0 0 / 20%);
+  padding: .25rem;
+}
+
+nav ul li a {
+  color: gray;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  position: relative
+}
+
+nav li:is(:hover, :active) ul {
+  display: block;
+}
+
+nav li ul a {
+  width: 100%;
+}
+
+/* un peu experimental mais permet de garder l'effet actif du lien parent quand on est dans le dropdown */
+nav li:has(ul:is(:hover, :active, :focus-within))>a {
+  background-color: #ddd;
+}
 
 /* #endregion Header NavBar Section*/
 
 /* #region a trier*/
 
 #wrapper {
-    display: flex;
-    width: 80em;
-    margin: auto;
+  display: flex;
+  width: 80em;
+  margin: auto;
 }
 
 #wrapper aside {
-    background-color: #fff;
-    flex: 1;
-    padding: 1em;
-    border-radius: 1em;
+  background-color: #fff;
+  flex: 1;
+  padding: 1em;
+  border-radius: 1em;
 }
 
 #wrapper aside img {
-    display: block;
-    width: 50%;
-    margin: auto;
+  display: block;
+  width: 50%;
+  margin: auto;
 }
 
 #wrapper main {
-    flex: 3;
-    padding-left: 1em;
-    height: 80vh;
-    overflow-y: scroll;
+  flex: 3;
+  padding-left: 1em;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
 #wrapper main article {
-    background-color: #fff;
-    padding: 1em;
-    margin-bottom: 1em;
-    border-radius: 1em;
+  background-color: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
 }
 
 #wrapper main article h3 {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    font-size: 1em;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 1em;
 
 }
 
 #wrapper main article time {
-    float: left;
+  float: left;
 }
 
 #wrapper main article address {
-    text-align: right;
-    margin-bottom: 1em;
+  text-align: right;
+  margin-bottom: 1em;
 }
 
 #wrapper main article p {
-    margin: 0;
+  margin: 0;
 }
 
 #wrapper main article footer {
-    margin-top: 1em;
-    text-align: right;
+  margin-top: 1em;
+  text-align: right;
 }
 
 #wrapper main article footer small {
-    float: left;
+  float: left;
 }
 
 #wrapper.admin {
-    flex-direction: row-reverse
+  flex-direction: row-reverse
 }
 
 #wrapper.admin aside {
-    flex: 1;
-    margin-left: 1em;
-    border-radius: 0;
-    padding: 0;
+  flex: 1;
+  margin-left: 1em;
+  border-radius: 0;
+  padding: 0;
 }
 
 #wrapper.admin main {
-    flex: 2;
-    background-color: #fff;
-    border-radius: 0;
-    padding: 0;
+  flex: 2;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 0;
 }
 
 #wrapper.admin h2 {
-    text-align: center;
+  text-align: center;
 }
 
 #wrapper.admin h3 {
-    margin: 0;
+  margin: 0;
 }
 
 #wrapper.admin nav {
-    text-align: right;
+  text-align: right;
 }
 
 #wrapper.admin article {
-    border: 1px solid #ddd;
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em;
+  border: 1px solid #ddd;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 1em;
 }
 
 #wrapper.admin article p {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 
 .parameters dl dt {
-    float: left;
-    font-weight: bold;
-    line-height: 1.5em;
+  float: left;
+  font-weight: bold;
+  line-height: 1.5em;
 }
 
 .parameters dl dd {
-    margin-left: 15em;
-    line-height: 1.5em;
+  margin-left: 15em;
+  line-height: 1.5em;
 }
 
 .contacts {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .contacts article {
-    width: 25em;
-    height: 7em;
-    margin-right: 1em;
+  width: 25em;
+  height: 7em;
+  margin-right: 1em;
 }
 
 .contacts article img {
-    float: right;
-    height: 5em;
+  float: right;
+  height: 5em;
 }
 
 pre {
-    color: #aaa;
+  color: #aaa;
 }
 
 /* #endregion à trier */
