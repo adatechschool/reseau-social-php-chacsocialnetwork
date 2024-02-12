@@ -20,7 +20,7 @@
     <nav aria-label="Navigation">
         <ul>
             <li><a href="news.php">Actualités</a></li>
-            <li><a href="wall.php?user_id=5">Mur</a></li>
+            <li><a href="wall.php?user_id=<?php echo $tag['id'] ?>">Mur</a></li>
             <li><a href="feed.php?user_id=5">Flux</a></li>
             <li><a href="tags.php?tag_id=1">Mots-clés</a></li>
             <li><a href="#">▾ Profil</a>
