@@ -64,7 +64,7 @@
             ?>
                 <article>
                     <img src="user.png" alt="blason" />
-                    <h3><?php echo $follower['alias']; ?></h3> 
+                    <h3><a href=""><?php echo $follower['alias']; ?></a></h3>
                 </article>
             <?php } ?>
         </main>
