@@ -1,30 +1,36 @@
+<?php include "connection.php"; ?>
+
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>ReSoC - Inscription</title> 
-        <meta name="author" content="Julien Falconnet">
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <header>
-            <img src="resoc.jpg" alt="Logo de notre réseau social"/>
-            <nav id="menu">
-                <a href="news.php">Actualités</a>
-                <a href="wall.php?user_id=5">Mur</a>
-                <a href="feed.php?user_id=5">Flux</a>
-                <a href="tags.php?tag_id=1">Mots-clés</a>
-            </nav>
-            <nav id="user">
-                <a href="#">Profil</a>
+
+<head>
+    <meta charset="utf-8">
+    <title>Send - Log In</title>
+    <link rel="shortcut icon" href="sendico.ico" type="image/x-icon">
+    <meta name="author" content="Chac">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="headerPS">
+        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
+        <h1>Send</h1>
+    </div>
+        <nav aria-label="Navigation">
+        <ul>
+            <li><a href="news.php">Actualités</a></li>
+            <li><a href="wall.php?user_id=5">Mur</a></li>
+            <li><a href="feed.php?user_id=5">Flux</a></li>
+            <li><a href="tags.php?tag_id=1">Mots-clés</a></li>
+            <li><a href="#">▾ Profil</a>
                 <ul>
                     <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
+                    <li><a href="followers.php?user_id=5">Mes followers</a></li>
                     <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
                 </ul>
-
-            </nav>
-        </header>
+            </li>
+        </ul>
+    </nav>
 
         <div id="wrapper" >
 
