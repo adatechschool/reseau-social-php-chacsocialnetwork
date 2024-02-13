@@ -78,7 +78,7 @@
                     $postContent = $mysqli->real_escape_string($postContent);
                     //Etape 4 : construction de la requete
                     $lInstructionSql = "INSERT INTO posts "
-                        . "(id, user_id, content, created, post_id) "
+                        . "(id, user_id, content, created, permalink, post_id) "
                         . "VALUES (NULL, "
                         . $authorId . ", "
                         . "'" . $postContent . "', "
