@@ -13,11 +13,11 @@
 </head>
 
 <body>
-<div class="headerPS">
-        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
+    <div class="headerPS">
+        <a href="admin.php"><img src="sendico.png" alt="Logo de Send" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
-        <nav aria-label="Navigation">
+    <nav aria-label="Navigation">
         <ul>
             <li><a href="news.php">Actualités</a></li>
             <li><a href="wall.php?user_id=5">Mur</a></li>

@@ -14,7 +14,7 @@
 <body>
 
     <div class="headerPS">
-        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
+        <a href="admin.php"><img src="sendico.png" alt="Logo de Send" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
 

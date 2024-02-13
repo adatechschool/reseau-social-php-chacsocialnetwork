@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php include "connection.php"; ?>
 
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="fr">
 
 <head>
@@ -14,7 +14,7 @@
 
 <body>
     <div class="headerPS">
-        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
+        <a href="admin.php"><img src="sendico.png" alt="Logo de Send" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
     <nav aria-label="Navigation">
@@ -44,10 +44,7 @@
             <article>
                 <h2>Poster un message</h2>
                 <?php
-                /**
-                 * BD
-                 */
-                $mysqli = new mysqli("localhost", "root", "root", "socialnetwork");
+
                 /**
                  * Récupération de la liste des auteurs
                  */
@@ -81,7 +78,7 @@
                     $postContent = $mysqli->real_escape_string($postContent);
                     //Etape 4 : construction de la requete
                     $lInstructionSql = "INSERT INTO posts "
-                        . "(id, user_id, content, created, permalink, post_id) "
+                        . "(id, user_id, content, created, post_id) "
                         . "VALUES (NULL, "
                         . $authorId . ", "
                         . "'" . $postContent . "', "
@@ -99,7 +96,7 @@
                 }
                 ?>
                 <form action="usurpedpost.php" method="post">
-                    <input type='hidden' name='???' value='achanger'>
+                    <input type='hidden' name='<?php echo $user['alias'] ?>' value='<?php echo $message['content'] ?>'>
                     <dl>
                         <dt><label for='auteur'>Auteur</label></dt>
                         <dd><select name='auteur'>

@@ -14,7 +14,7 @@
 <body>
 
     <div class="headerPS">
-        <a href="admin.php"><img src="resoc.png" alt="Logo de Pride Score" width="30" height=auto></a>
+        <a href="admin.php"><img src="sendico.png" alt="Logo de Send" width="30" height=auto></a>
         <h1>Send</h1>
     </div>
     <nav aria-label="Navigation">
@@ -88,9 +88,9 @@
              * Etape 4: @todo Parcourir les messsages et remplir correctement le HTML avec les bonnes valeurs php
              */
             while ($post = $lesInformations->fetch_assoc()) {
-                  echo "<pre>" . print_r($post, 1) . "</pre>";
+                echo "<pre>" . print_r($post, 1) . "</pre>";
             ?>
-            
+
                 <article>
                     <h3>
                         <time datetime='2020-02-01 11:12:13'><?php echo $post['created']; ?></time>
