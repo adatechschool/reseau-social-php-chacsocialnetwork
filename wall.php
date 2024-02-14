@@ -90,7 +90,7 @@
                         . "(id, user_id, content, created, parent_id) "
                         . "VALUES (NULL, "
                         . $authorId . ", "
-                        . "'" . $postContent . "', "
+                        . "'" . $postContent . ", "
                         . "NOW(), "
                         . "NULL);";
                     echo $lInstructionSql;
