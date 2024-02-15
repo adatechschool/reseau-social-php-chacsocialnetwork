@@ -94,17 +94,18 @@
                  * Attention à en pas oublier de modifier dans le lien les "user_id=123" avec l'id de l'utilisatrice
                  */
             while ($tag = $lesInformations->fetch_assoc()) {
-                echo "<pre>" . print_r($tag, 1) . "</pre>";
             ?>
                 <article>
                     <h3><?php echo $tag['alias']; ?></h3>
                     <p><?php echo $tag['id']; ?></p>
-                    <nav>
-                        <a href="wall.php?user_id=<?php echo $tag['id'] ?>">Mur</a>
-                        <a href="feed.php?user_id=<?php echo $tag['id'] ?>">Flux</a>
-                        <a href="settings.php?user_id=<?php echo $tag['id'] ?>">Paramètres</a>
-                        <a href="followers.php?user_id=<?php echo $tag['id'] ?>">Suiveurs</a>
-                        <a href="subscriptions.php?user_id=<?php echo $tag['id'] ?>">Abonnements</a>
+                    <nav aria-label="Navigation">
+                        <ul>
+                            <li><a href="wall.php?user_id=<?php echo $tag['id'] ?>">Mur</a></li>
+                            <li><a href="feed.php?user_id=<?php echo $tag['id'] ?>">Flux</a></li>
+                            <li><a href="settings.php?user_id=<?php echo $tag['id'] ?>">Paramètres</a></li>
+                            <li><a href="followers.php?user_id=<?php echo $tag['id'] ?>">Suiveurs</a></li>
+                            <li><a href="subscriptions.php?user_id=<?php echo $tag['id'] ?>">Abonnements</a></li>
+                            <ul>
                     </nav>
                 </article>
             <?php } ?>
