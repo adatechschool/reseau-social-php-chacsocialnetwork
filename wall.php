@@ -103,7 +103,6 @@
                     }
                 }
                 ?>
-                <?php echo "<pre>" . print_r($_POST, 1) . "</pre>"; ?>
                 <form action="wall.php" method="post">
                     <dt><label for='message'>Message</label></dt>
                     <dd><textarea name='message'></textarea></dd>
